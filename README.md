@@ -29,11 +29,12 @@ The **MERN Blog App** is a full-stack web application that allows users to creat
 
 ### **👥 Roles & Permissions**  
 
-| Role   | Create Blogs | Edit Own Blogs | Delete Own Blogs | Edit/Delete Any Blogs | Comment & Like | Manage Users & Comments | Access Admin Panel |
-|--------|------------|---------------|----------------|--------------------|--------------|---------------------|----------------|
-| **Admin**  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Author** | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| **Guest**  | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Role    | Description |
+|---------|------------|
+| Admin   | Can delete blog posts. Has full control over user management, comments, and overall platform moderation. Access to an admin panel for managing the application. |
+| Author  | Can create, edit, and delete their own blog posts. Can interact with posts by commenting and liking. Cannot manage other users or modify posts created by others. |
+| Guest   | Can only view blog posts. Cannot create, edit, delete, comment, or like posts. |
+
 
 
 ## 🛠 Tech Stack  
