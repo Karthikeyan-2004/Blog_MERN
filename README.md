@@ -54,5 +54,6 @@ The **MERN Blog App** is a full-stack web application that allows users to creat
 ### **Database:**  
 - 🗄 **MongoDB (Atlas or Local)** – Stores blogs, users, and comments  
 
-
+## WireFrame
+![WireFrame](./WireFrame.png)
 ---
