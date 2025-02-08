@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Navbar() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <nav style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      padding: '10px 0', 
+      background: '#222', 
+      position: 'fixed', 
+      top: '0', 
+      width: '100%', 
+      zIndex: '1000' 
+    }}>
+      <ul style={{ 
+        listStyle: 'none', 
+        display: 'flex', 
+        gap: '20px', 
+        padding: '0', 
+        margin: '0' 
+      }}>
+        <li><Link to="/" style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Home</Link></li>
+        <li><Link to="/about" style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>About</Link></li>
+        <li><Link to="/contact" style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>Contact</Link></li>
+      </ul>
+    </nav>
+  );
 }
 
-export default App
+import React from 'react';
+
+function Home() {
+  return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <h1>Home Page</h1>
+    </div>
+  );
+}
+
+function About() {
+  return <h1>About Page</h1>;
+}
+
+function Contact() {
+  return <h1>Contact Page</h1>;
+}
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
