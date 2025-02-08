@@ -1,21 +1,4 @@
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #4a90e2;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: #fff;
+.app {
+  padding-top: 100px;
+  min-width: 80vw;
 }
